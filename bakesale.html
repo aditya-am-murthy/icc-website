@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bake Sale Pre-order · Indian Cinema Collective</title>
+  <meta name="description" content="UCLA's first and only South Asian cinema club. Screenings, socials, and conversations about Indian and South Asian film.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Rozha+One&family=Yatra+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23b3221b' stroke='%23d4a24c' stroke-width='4'/%3E%3Ctext x='32' y='42' font-size='26' text-anchor='middle' fill='%23d4a24c' font-family='Georgia'%3EICC%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">ICC</span>
+      <span class="brand-text">Indian Cinema Collective<small>at UCLA</small></span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav">
+      <a href="index.html">Home</a>
+      <a href="events.html">Events</a>
+      <a href="team.html">Our Board</a>
+      <a href="join.html">Join</a>
+      <a class="btn btn-sm" href="bakesale.html">Pre-order Sweets</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">Fundraiser Pre-sale</span>
+      <h1>Mithai on the Walk</h1>
+      <p>Reserve your sweets before Tuesday, October 6th. Pick them up at our table on Bruin Walk. All proceeds fund ICC screenings and socials.</p>
+    </div>
+  </section>
+
+  <section class="presale" style="padding-top:0">
+    <div class="wrap form-stage">
+      <img class="sticker sticker-bheem" src="images/chotta-bheem-sticker.png" alt="" width="210" height="413" aria-hidden="true">
+      <img class="sticker sticker-katli" src="images/kaju-katli-sticker.png" alt="" width="280" height="264" aria-hidden="true">
+
+      <form class="form-card" id="presale-form" name="bake-sale-presale" method="POST" action="thanks.html" enctype="multipart/form-data" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="bake-sale-presale">
+        <input type="hidden" name="estimated_total" value="0.00">
+        <input type="hidden" name="payment_method" value="Venmo">
+        <input type="hidden" name="venmo_to" value="@aditya-am-murthy">
+        <input type="hidden" name="order_id" value="">
+        <input type="hidden" name="order_summary" value="">
+        <p class="hidden"><label>Leave this empty: <input name="bot-field"></label></p>
+
+        <span class="eyebrow">Step One</span>
+        <h2>Your Order</h2>
+
+        <div class="order-item">
+          <div>
+            <h4>Kaju Katli</h4>
+            <p>Diamond-cut cashew fudge · <span data-price-for="kaju_katli">$2 / 4 ct</span></p>
+          </div>
+          <div class="qty">
+            <button type="button" data-step="-1" aria-label="Fewer kaju katli">−</button>
+            <input type="number" name="kaju_katli" value="0" min="0" max="50" inputmode="numeric" aria-label="Kaju katli quantity">
+            <button type="button" data-step="1" aria-label="More kaju katli">+</button>
+          </div>
+        </div>
+        <div class="order-item">
+          <div>
+            <h4>Cardamom Shortbread</h4>
+            <p>Buttery, crumbly, with a hint of elaichi · <span data-price-for="cardamom_shortbread">$2 / 4 ct</span></p>
+          </div>
+          <div class="qty">
+            <button type="button" data-step="-1" aria-label="Fewer shortbread">−</button>
+            <input type="number" name="cardamom_shortbread" value="0" min="0" max="50" inputmode="numeric" aria-label="Cardamom shortbread quantity">
+            <button type="button" data-step="1" aria-label="More shortbread">+</button>
+          </div>
+        </div>
+
+        <div class="total-bar"><span>Total</span><strong data-total>$0.00</strong></div>
+        <p class="form-note hidden" data-error style="color:var(--red)">Add at least one box to place a pre-order.</p>
+
+        <span class="eyebrow" style="margin-top:20px">Step Two</span>
+        <h2>Your Details</h2>
+        <div class="field-row">
+          <div class="field">
+            <label for="first_name">First Name</label>
+            <input id="first_name" name="first_name" autocomplete="given-name" required>
+          </div>
+          <div class="field">
+            <label for="last_name">Last Name</label>
+            <input id="last_name" name="last_name" autocomplete="family-name" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="phone">Phone (suggested)</label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel">
+        </div>
+
+        <div class="pay-box">
+          <p>Pay with Venmo. Send the total to <a class="venmo-handle" href="https://venmo.com/u/aditya-am-murthy" target="_blank" rel="noopener">@aditya-am-murthy</a>, then upload a screenshot of the payment.</p>
+          <div class="field">
+            <label for="venmo_screenshot">Venmo payment screenshot</label>
+            <input id="venmo_screenshot" name="venmo_screenshot" type="file" accept="image/*" required>
+          </div>
+        </div>
+
+        <p class="form-note">Heads up: kaju katli contains cashews; shortbread contains wheat, butter, and dairy. Both are made in a kitchen that handles nuts.</p>
+        <p class="form-note hidden" data-submit-error style="color:var(--red)">We couldn't send your order. Check your connection and try again.</p>
+        <button class="btn" type="submit">Reserve My Sweets</button>
+      </form>
+
+      <div class="form-card confirm-card hidden" id="order-confirm" hidden aria-hidden="true">
+        <span class="eyebrow">Show this at pickup</span>
+        <h2>Order Confirmed</h2>
+        <p class="confirm-lead">Screenshot this screen and show it at the Bruin Walk table on Tuesday, October 6.</p>
+        <div class="pickup-slip">
+          <p class="slip-label">Order ID</p>
+          <p class="slip-id" data-confirm="id"></p>
+          <p class="slip-label">Name</p>
+          <p class="slip-name" data-confirm="name"></p>
+          <p class="slip-label">Order</p>
+          <ul class="slip-items" data-confirm="items"></ul>
+          <div class="slip-total"><span>Paid via Venmo</span><strong data-confirm="total"></strong></div>
+        </div>
+        <p class="form-note" data-preview>Preview only: this order was not sent. On the live site, this screen appears after the form is received.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="index.html">
+          <span class="brand-mark">ICC</span>
+          <span class="brand-text">Indian Cinema Collective<small>at UCLA</small></span>
+        </a>
+        <p style="margin-top:16px;color:#cbb991;max-width:40ch">UCLA's first and only South Asian cinema club.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="team.html">Our Board</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="bakesale.html">Bake Sale Pre-order</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow Along</h4>
+        <ul>
+          <li><a href="https://www.instagram.com/icc_ucla/" target="_blank" rel="noopener">Instagram · @icc_ucla</a></li>
+          <li><a href="https://linktr.ee/icc_ucla" target="_blank" rel="noopener">Linktree</a></li>
+          <li><a href="https://www.international.ucla.edu/cisa" target="_blank" rel="noopener">UCLA CISA</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fine">
+      <span>© <span data-year></span> Indian Cinema Collective at UCLA</span>
+      <span>Made by Bruins, fuelled by chai.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
