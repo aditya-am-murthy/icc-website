@@ -11,9 +11,10 @@ if (toggle && nav) {
 }
 
 // Mark current page in nav
-const here = location.pathname.split("/").pop() || "index.html";
+const here = (location.pathname.split("/").pop() || "index").replace(/\.html$/, "") || "index";
 document.querySelectorAll(".nav a").forEach((a) => {
-  if (a.getAttribute("href") === here) a.setAttribute("aria-current", "page");
+  const href = (a.getAttribute("href") || "").split("/").pop().replace(/\.html$/, "");
+  if (href === here) a.setAttribute("aria-current", "page");
 });
 
 // Reveal on scroll

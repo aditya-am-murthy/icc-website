@@ -1,2 +1,24 @@
 [build]
   publish = "."
+
+# /mithai stays in the address bar and serves mithai.html.
+# Old bake-sale URLs keep working.
+[[redirects]]
+  from = "/mithai"
+  to = "/mithai.html"
+  status = 200
+
+[[redirects]]
+  from = "/mithai/"
+  to = "/mithai"
+  status = 301
+
+[[redirects]]
+  from = "/bakesale"
+  to = "/mithai"
+  status = 301
+
+[[redirects]]
+  from = "/bakesale.html"
+  to = "/mithai"
+  status = 301

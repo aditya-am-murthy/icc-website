@@ -541,8 +541,10 @@ fieldset.field { border: 0; padding: 0; margin: 0 0 18px; }
   letter-spacing: 0;
   font-size: 1.05rem;
   white-space: nowrap;
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
+.venmo-handle:hover { color: var(--red); }
 .field input[type="file"] { padding: 9px 12px; cursor: pointer; }
 .form-card .btn:disabled { opacity: .7; cursor: wait; transform: none; }
 
