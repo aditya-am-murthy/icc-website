@@ -4,6 +4,12 @@
 # /mithai stays in the address bar and serves mithai.html.
 # Old bake-sale URLs keep working.
 [[redirects]]
+  from = "/api/order"
+  to = "/.netlify/functions/notion-order"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/mithai"
   to = "/mithai.html"
   status = 200

@@ -153,7 +153,7 @@ if (orderForm) {
     const ctrl = new AbortController();
     const timer = setTimeout(() => ctrl.abort(), 20000);
     try {
-      const res = await fetch("/", { method: "POST", body: new FormData(orderForm), signal: ctrl.signal });
+      const res = await fetch("/api/order", { method: "POST", body: new FormData(orderForm), signal: ctrl.signal });
       ok = res.ok;
     } catch (_) {
       ok = false;
