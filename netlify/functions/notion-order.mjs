@@ -1,3 +1,4 @@
+// Bake Sale Fundraiser data source. NOTION_TOKEN comes from the Netlify environment.
 const DATA_SOURCE_ID = "3ef179bb-cbaa-8057-b40a-000b0051e093";
 const NOTION_VERSION = "2026-03-11";
 
